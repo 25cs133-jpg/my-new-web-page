@@ -3,42 +3,34 @@
    Lavanya T.R - Premium Creative UI
    ========================================== */
 
-/* =========================
-   ROOT VARIABLES
-========================= */
-
 :root {
-    --bg-color: #0f172a;
-    --card-color: #1e293b;
-    --text-color: #ffffff;
-    --accent-color: #38bdf8;
-    --secondary-text: #cbd5e1;
-    --transition: 0.4s ease;
-}
+  --dark1: #050816;
+  --dark2: #0b0f2a;
 
-.light-mode {
-    --bg-color: #ffffff;
-    --card-color: #f1f5f9;
-    --text-color: #0f172a;
-    --accent-color: #2563eb;
-    --secondary-text: #475569;
+  --pink: #ff2bd6;
+  --blue: #4cc9f0;
+  --purple: #9b5de5;
+  --green: #00f5a0;
+  --yellow: #ffd166;
+  --orange: #ff7a00;
+
+  --text: #ffffff;
+  --muted: rgba(255,255,255,0.75);
 }
 
 /* RESET */
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 /* 🌈 VERY COLORFUL ANIMATED BACKGROUND */
 body {
-    font-family: Arial, sans-serif;
-    background: var(--bg-color);
-    color: var(--text-color);
-    transition: var(--transition);
-    line-height: 1.6;
-
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
 
   background:
     radial-gradient(circle at 10% 20%, rgba(255, 43, 214, 0.45), transparent 40%),
@@ -68,87 +60,22 @@ body::before {
 }
 
 /* HEADER */
-body {
-    background: var(--bg-color);
-    color: var(--text-color);
-    font-family: Arial, sans-serif;
+.site-header {
+  text-align: center;
+  padding: 2.5rem 1rem;
+
+  background: linear-gradient(90deg,
+    var(--pink),
+    var(--blue),
+    var(--purple),
+    var(--green));
+
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
 }
 
-header {
-    background: #111827;
-
-    padding: 20px 0;
-}
-
-.container {
-    width: 90%;
-    margin: auto;
-}
-
-.navbar {
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-}
-
-.logo {
-    font-size: 28px;
-    font-weight: bold;
-}
-
-nav ul {
-    display: flex;
-
-    list-style: none;
-
-    gap: 20px;
-}
-
-nav a {
-    color: white;
-
-    text-decoration: none;
-}
-
-.theme-toggle {
-    padding: 10px 15px;
-
-    border: none;
-
-    background: var(--accent-color);
-
-    color: white;
-
-    cursor: pointer;
-}
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 25px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: var(--accent-color);
+.site-header h1 {
+  font-size: 2.6rem;
+  letter-spacing: 2px;
 }
 
 /* NAV */
@@ -188,8 +115,7 @@ nav a:hover {
 .hero h2 {
   font-size: 2.5rem;
   background: linear-gradient(90deg, var(--pink), var(--yellow), var(--blue), var(--green));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
 }
 
 .hero p {
@@ -322,39 +248,4 @@ button:hover {
   background: rgba(0,0,0,0.5);
   border-top: 1px solid rgba(255,255,255,0.25);
   color: var(--muted);
-}
-.projects-grid {
-    display: grid;
-
-    grid-template-columns:
-    repeat(auto-fit, minmax(300px, 1fr));
-
-    gap: 30px;
-
-    margin-top: 40px;
-}
-
-.project-card {
-    background: var(--card-color);
-    padding: 30px;
-    border-radius: 16px;
-    transition: 0.4s;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-}
-@media (max-width: 768px) {
-
-    .navbar {
-        flex-direction: column;
-
-        gap: 20px;
-    }
-
-    nav ul {
-        flex-direction: column;
-
-        align-items: center;
-    }
 }
